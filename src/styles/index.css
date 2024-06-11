@@ -1,6 +1,11 @@
-/* src/TrafficLight.css */
 main {
     height: 100vh;
+}
+
+body {
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-position: center;
 }
 
 .p-box {
