@@ -49,3 +49,8 @@ body {
         center/contain no-repeat;
     transform: translateY(10px);
 }
+
+.text-with-border {
+    text-shadow: -1px -1px 0 black, 1px -1px 0 black, -1px 1px 0 black,
+        1px 1px 0 black;
+}
