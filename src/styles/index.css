@@ -5,7 +5,7 @@ main {
 body {
     background-image: url("https://raw.githubusercontent.com/greyzeids/traffic-light/main/src/img/background.jpg");
     background-size: cover;
-    background-position: center;
+    background-position: end;
 }
 
 .traffic-light {
@@ -35,7 +35,7 @@ body {
 .light.red.active {
     background: url("https://github.com/greyzeids/traffic-light/blob/main/src/img/red.png?raw=true")
         center/contain no-repeat;
-    transform: translateY(13px);
+    transform: translateY(12px);
 }
 
 .light.yellow.active {
