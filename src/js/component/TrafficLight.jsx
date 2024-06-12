@@ -45,9 +45,8 @@ const TrafficLight = () => {
                     </div>
                     <div className="text-center mt-3 text-warning fs-5 rounded p-3 bg-dark bg-opacity-50">
                         <p className="text-with-border">
-                            Haz click en una luz para encenderla, además puedes
-                            presionar
-                            <br /> el botón para cambiar de color aleatoriamente
+                            Haz click en una luz para encenderla, ¡click en el
+                            botón para que se vuelva locoo!
                         </p>
                         <button
                             className="btn bg-danger text-white"
