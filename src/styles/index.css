@@ -27,6 +27,16 @@ body {
     background-color: black;
 } */
 
+.traffic-light {
+    background: url("https://github.com/greyzeids/traffic-light/blob/main/src/img/off.png?raw=true")
+        no-repeat center center;
+    background-size: contain;
+    width: 180px;
+    height: 480px;
+    position: relative;
+    margin: 0 auto;
+}
+
 .traffic-light div {
     width: 130px;
     height: 130px;
