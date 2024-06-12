@@ -4,20 +4,15 @@ const TrafficLight = () => {
     const [activeLight, setActiveLight] = useState("");
 
     const toggleLight = () => {
-        setActiveLight((prevLight) =>
-            prevLight === "" || prevLight === "green"
-                ? "red"
-                : prevLight === "red"
-                ? "yellow"
-                : "green"
-        );
+        const lights = ["red", "yellow", "green"];
+        const randomIndex = Math.floor(Math.random() * lights.length);
+        setActiveLight(lights[randomIndex]);
     };
 
     return (
         <main className="container">
             <div className="row justify-content-center">
                 <div className="col-md-4">
-                    <div className="p-box"></div>
                     <div className="traffic-light">
                         <div
                             className={`light red ${
