@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import trafficLightFrame from "../../img/off.png";
 
 const TrafficLight = () => {
     const [activeLight, setActiveLight] = useState("");
