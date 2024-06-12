@@ -1,12 +1,36 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const TrafficLight = () => {
     const [activeLight, setActiveLight] = useState("");
+    const [isAutoToggle, setIsAutoToggle] = useState(false);
+
+    useEffect(() => {
+        let intervalId;
+
+        const toggleLightAutomatically = () => {
+            const lights = ["red", "yellow", "green"];
+            const randomIndex = Math.floor(Math.random() * lights.length);
+            setActiveLight(lights[randomIndex]);
+        };
+
+        if (isAutoToggle) {
+            intervalId = setInterval(toggleLightAutomatically, 500);
+        } else {
+            clearInterval(intervalId);
+        }
+
+        return () => {
+            clearInterval(intervalId);
+        };
+    }, [isAutoToggle]);
 
     const toggleLight = () => {
-        const lights = ["red", "yellow", "green"];
-        const randomIndex = Math.floor(Math.random() * lights.length);
-        setActiveLight(lights[randomIndex]);
+        if (!isAutoToggle) {
+            const lights = ["red", "yellow", "green"];
+            const randomIndex = Math.floor(Math.random() * lights.length);
+            setActiveLight(lights[randomIndex]);
+        }
+        setIsAutoToggle(!isAutoToggle);
     };
 
     return (
@@ -43,7 +67,7 @@ const TrafficLight = () => {
                             className="btn bg-danger text-white"
                             onClick={toggleLight}
                         >
-                            Alternar
+                            {isAutoToggle ? "Parar" : "¡Click aquí!"}
                         </button>
                     </div>
                 </div>
