@@ -10,9 +10,9 @@ const TrafficLight = () => {
     };
 
     return (
-        <main className="container">
+        <main className="container-fluid">
             <div className="row justify-content-center">
-                <div className="col-md-4">
+                <div className="col-md-4 col-sm-12">
                     <div className="traffic-light">
                         <div
                             className={`light red ${

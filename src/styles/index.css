@@ -1,9 +1,9 @@
 main {
-    height: 100vh;
+    min-height: 100vh;
 }
 
 body {
-    background-image: url("https://raw.githubusercontent.com/greyzeids/traffic-light/main/src/img/background.jpg");
+    background-image: url("https://github.com/greyzeids/traffic-light/blob/main/src/img/background2.jpg?raw=true");
     background-size: cover;
     background-position: end;
 }
