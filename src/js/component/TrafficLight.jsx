@@ -5,6 +5,19 @@ const TrafficLight = () => {
     const [isAutoToggle, setIsAutoToggle] = useState(false);
 
     useEffect(() => {
+        const images = [
+            "https://github.com/greyzeids/traffic-light/blob/main/src/img/background.jpg?raw=true",
+            "https://github.com/greyzeids/traffic-light/blob/main/src/img/off.png?raw=true",
+            "https://github.com/greyzeids/traffic-light/blob/main/src/img/red.png?raw=true",
+            "https://github.com/greyzeids/traffic-light/blob/main/src/img/ambar.png?raw=true",
+            "https://github.com/greyzeids/traffic-light/blob/main/src/img/green.png?raw=true",
+        ];
+
+        images.forEach((src) => {
+            const img = new Image();
+            img.src = src;
+        });
+
         let intervalId;
 
         const toggleLightAutomatically = () => {
