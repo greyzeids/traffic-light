@@ -18,7 +18,7 @@ const TrafficLight = () => {
             img.src = src;
         });
 
-        let intervalId;
+        let interval;
 
         const toggleLightAutomatically = () => {
             const lights = ["red", "yellow", "green"];
@@ -27,13 +27,13 @@ const TrafficLight = () => {
         };
 
         if (isAutoToggle) {
-            intervalId = setInterval(toggleLightAutomatically, 500);
+            interval = setInterval(toggleLightAutomatically, 500);
         } else {
-            clearInterval(intervalId);
+            clearInterval(interval);
         }
 
         return () => {
-            clearInterval(intervalId);
+            clearInterval(interval);
         };
     }, [isAutoToggle]);
 
