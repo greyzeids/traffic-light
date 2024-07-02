@@ -1,17 +1,16 @@
 import React, { useState, useEffect } from "react";
+import ambar from "../../img/ambar.png";
+import green from "../../img/green.png";
+import off from "../../img/off.png";
+import red from "../../img/red.png";
+import background from "../../img/background.jpg";
 
 const TrafficLight = () => {
     const [activeLight, setActiveLight] = useState("");
     const [isAutoToggle, setIsAutoToggle] = useState(false);
 
     useEffect(() => {
-        const images = [
-            "https://github.com/greyzeids/traffic-light/blob/main/src/img/background.jpg?raw=true",
-            "https://github.com/greyzeids/traffic-light/blob/main/src/img/off.png?raw=true",
-            "https://github.com/greyzeids/traffic-light/blob/main/src/img/red.png?raw=true",
-            "https://github.com/greyzeids/traffic-light/blob/main/src/img/ambar.png?raw=true",
-            "https://github.com/greyzeids/traffic-light/blob/main/src/img/green.png?raw=true",
-        ];
+        const images = [ambar, green, off, red, background];
 
         images.forEach((src) => {
             const img = new Image();
